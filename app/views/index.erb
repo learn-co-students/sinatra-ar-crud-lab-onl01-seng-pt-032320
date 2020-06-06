@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Article list</title>
+  </head>
+    <%Article.all.each do |one|%>
+    <li><a href="articles/<% one.id %>"><%= one.title %></a></li>
+        
+        
+        <%end%>
+  <body>
+  
+  </body>
+</html>
