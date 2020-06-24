@@ -30,9 +30,30 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/:id' do
-    binding.pry
     @article = Article.find_by_id(params[:id])
 
     erb :show
+  end
+
+  get '/articles/:id/edit' do
+    @article = Article.find_by_id(params[:id])
+    erb :edit
+  end
+
+  patch '/articles/:id' do
+    new_params = {}
+    old_article = Article.find_by_id(params[:id])
+    new_params[:name] = params[:name]
+    new_params[:content] = params[:content]
+    old_article.update(new_params)
+
+    redirect "articles/#{article.id}"
+  end
+
+  delete '/articles/:id/delete' do
+    @article = Article.find_by_id(params[:id])
+    @article.destroy
+
+    redirect '/articles'
   end
 end
