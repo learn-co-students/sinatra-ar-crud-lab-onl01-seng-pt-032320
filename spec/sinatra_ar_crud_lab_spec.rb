@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe "Magazine App" do
-  let(:article_title) { "Hello World!!!!" }
+  let(:article_title) { "Hello World" }
   let(:article_content) { "This is my first article!!!" }
 
   before do
     @article1 = Article.create(:title => article_title, :content => article_content)
-    @article2 = Article.create(:title => "second article", :content => "I'm a really good writer")
+    @article2 = Article.create(:title => "Second Article!!", :content => "I'm a really good writer")
   end
 
   describe "Create Action" do
