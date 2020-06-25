@@ -5,7 +5,7 @@
     <label for="title">Article Title:</label>
     <input id="title" type="text" name="title" value="<%=@article.title%>" /><br>
     <label for="content">Article Content:</label>
-    <textarea id="content" type="text" name="content" >I'm a really good writer<%= @article.content %></textarea><br>
+    <textarea id="content" type="text" name="content" ><%= @article.content %></textarea><br>
     <input type="submit" value="Update second article">
 </form>
 

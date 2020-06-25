@@ -33,6 +33,10 @@ class ApplicationController < Sinatra::Base
    redirect "/articles/#{@article.id}"
   end 
   
+
+  get '/articles/:id/edit' do 
+    @article = Article.find_by(params[:id])
+    
   get '/articles/:id/edit' do 
     @article = Article.find_by(params[:id])
     erb :edit 
@@ -40,9 +44,12 @@ class ApplicationController < Sinatra::Base
   
   patch '/articles/:id' do
     @article = Article.find_by(params[:id])
+    @article = Article.find(params[:id])
     @article.title = params[:title]
     @article.content = params[:content]
     @article.save
     redirect "/articles/#{params[:id]}"
   end
+
 end 
+
