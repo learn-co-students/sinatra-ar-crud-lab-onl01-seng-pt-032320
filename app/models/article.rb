@@ -1,5 +1,5 @@
 #Placeholder for a model
 require 'pry'
 class Article < ActiveRecord::Base
-  binding.pry
+  #binding.pry
 end
