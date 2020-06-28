@@ -102,3 +102,4 @@ make sure the form includes the hidden input tag to change the request from
 `POST` to `DELETE`, similar to how we constructed the `PATCH` request above
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-ar-crud-lab'>Sinatra ActiveRecord CRUD</a> on Learn.co and start learning to code for free.</p>
+
