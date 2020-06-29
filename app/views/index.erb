@@ -1,0 +1,15 @@
+<div class="card-header">
+	<h1 class="card-title">Articles</h1>
+</div>
+<div class="card-body">
+	<div class="card">
+		<ul class="list-group list-group-flush">
+			<% if !@articles.blank? %>
+			<% for article in @articles %>
+			<li class="list-group-item"><a class="card-link" href="/articles/<%= article.id %>"><%= article.title %></a>
+			</li>
+			<% end %>
+			<% end %>
+		</ul>
+	</div>
+</div>
