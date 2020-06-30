@@ -12,9 +12,9 @@ class ApplicationController < Sinatra::Base
   end
 
   # index
-  get "/articles" do
-    @articles = Article.all
-    erb :'/index'
+  get "/articles" do   #showcase's all of the articles in the index.erb file that was stored in the instance varible @articles
+    @articles = Article.all 
+    erb :index
   end
 
   # new
