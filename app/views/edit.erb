@@ -1,0 +1,12 @@
+#edit.erb
+<body>
+    <form method='post' action="/articles/<%=@article.id%>">
+        <input type="hidden" id="hidden" name="_method" value="patch">
+        <br>
+        <label name='title'>Title</label><br>
+        <input name='title' value="<%=@article.title%>"><br>
+        <label name='content'>Content</label><br>
+        <textarea name='content' value="<%=@article.content%>"></textarea><br>
+        <button type="submit" value="submit">Submit</button> 
+    </form>
+</body>
